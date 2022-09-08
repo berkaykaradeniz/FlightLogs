@@ -13,10 +13,10 @@
                     <th>origin</th>
                     <th>flight_status</th>
                     <th>captain_name</th>
+                    <th>destination</th>
                 </tr>
             </thead>
             <tbody>
-
             <tfoot>
                 <tr>
                     <th>Name</th>
@@ -25,6 +25,7 @@
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
+                    <th>destination</th>
                 </tr>
             </tfoot>
         </table>

@@ -3,7 +3,6 @@
 $(document).ready(function () {
     $('#flight_logs_table').DataTable({
         processing: true,
-        serverSide: true,
         ajax: {
             url: 'api/getFlightLogs.php',
             type: 'POST',
@@ -14,7 +13,8 @@ $(document).ready(function () {
             { data: "schedule" },
             { data: "origin" },
             { data: "flight_status" },
-            { data: "captain_name" }
+            { data: "captain_name" },
+            { data: "destination" }
         ],
     });
 });

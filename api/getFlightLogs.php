@@ -2,6 +2,7 @@
     header('Content-Type: application/json; charset=utf-8');
 
     $con= new mysqli("localhost","root","","flight_logs");
+    $con->set_charset("utf8");
 
     // Check connection
     if ($con -> connect_errno) {
@@ -27,7 +28,7 @@
     $result = array();
     $result['draw']= 1;
     $result['recordsTotal']= $row_cnt;
-    $result['recordsFiltered']= $row_cnt;
+    $result['recordsFiltered']= 10;
 
     while($rows = mysqli_fetch_assoc($query))
     {
@@ -36,6 +37,7 @@
             $schedule = $rows['schedule'];
             $origin = $rows['origin'];
             $dest = $rows['destination'];
+
             if ($rows['flight_status'])
                 $flight_status = "Done";
             else
@@ -50,7 +52,7 @@
                 'origin' => $origin,
                 'flight_status' => $flight_status,
                 'captain_name' => $captain_name,
-                //'destination' => $dest, 
+                'destination' => $dest
             );
     }
 
