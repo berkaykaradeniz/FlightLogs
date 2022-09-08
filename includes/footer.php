@@ -11,10 +11,10 @@ $(document).ready(function () {
             { data: "id" },
             { data: "airline_code" },
             { data: "schedule" },
-            { data: "origin" },
-            { data: "flight_status" },
+            { data: "origin" },      
+            { data: "destination" },
             { data: "captain_name" },
-            { data: "destination" }
+            { data: "flight_status" },
         ],
     });
 });

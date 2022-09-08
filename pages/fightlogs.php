@@ -7,25 +7,25 @@
         <table id="flight_logs_table" class="table table-striped">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>airline_code</th>
-                    <th>schedule</th>
-                    <th>origin</th>
-                    <th>flight_status</th>
-                    <th>captain_name</th>
-                    <th>destination</th>
+                    <th>Flight Log ID</th>
+                    <th>Airline Code</th>
+                    <th>Scheduled</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Captain</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
             <tfoot>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>destination</th>
+                    <th>Flight Log ID</th>
+                    <th>Airline Code</th>
+                    <th>Scheduled</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Captain</th>
+                    <th>Status</th>
                 </tr>
             </tfoot>
         </table>

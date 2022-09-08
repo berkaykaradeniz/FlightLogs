@@ -32,28 +32,28 @@
 
     while($rows = mysqli_fetch_assoc($query))
     {
-            $log_id = $rows['log_id'];
-            $airline_code = $rows['airline_code'];
-            $schedule = $rows['schedule'];
-            $origin = $rows['origin'];
-            $dest = $rows['destination'];
+        $log_id = $rows['log_id'];
+        $airline_code = $rows['airline_code'];
+        $schedule = $rows['schedule'];
+        $origin = $rows['origin'];
+        $destination = $rows['destination'];
 
-            if ($rows['flight_status'])
-                $flight_status = "Done";
-            else
-                $flight_status = "Planned";
+        if ($rows['flight_status'])
+            $flight_status = "Done";
+        else
+            $flight_status = "Planned";
 
-            $captain_name = $rows['captain_name'];
+        $captain_name = $rows['captain_name'];
 
-            $result['data'][] = array(
-                'id' => $log_id, 
-                'airline_code' => $airline_code,
-                'schedule' => $schedule, 
-                'origin' => $origin,
-                'flight_status' => $flight_status,
-                'captain_name' => $captain_name,
-                'destination' => $dest
-            );
+        $result['data'][] = array(
+            'id' => $log_id, 
+            'airline_code' => $airline_code,
+            'schedule' => $schedule, 
+            'origin' => $origin,
+            'flight_status' => $flight_status,
+            'captain_name' => $captain_name,
+            'destination' => $destination
+        );
     }
 
     echo json_encode($result);
