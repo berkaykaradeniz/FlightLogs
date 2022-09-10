@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: flight_logs
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./php/database/flight_logs.sql:/docker-entrypoint-initdb.d/flight_logs.sql
+  web:
+    build: .
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ./php/:/var/www/html/
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123
+      MYSQL_DB: flight_logs
+    ports:
+      - "80:80"
