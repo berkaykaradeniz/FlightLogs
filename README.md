@@ -1,12 +1,12 @@
-## Flight Logs
+# Flight Logs
 
-# CLONE
+## CLONE
 
 git clone https://github.com/berkaykaradeniz/flightLogs
 
-# RUN
+## RUN
 sudo docker-compose up -d
 
-# DEMO
+## DEMO
 http://149.3.171.72
 
